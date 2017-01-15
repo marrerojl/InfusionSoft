@@ -1,0 +1,736 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Infusion.Interface</name>
+    </assembly>
+    <members>
+        <member name="T:Infusion.Interface.Access">
+            <summary>
+            Entry point. Contain all the methods to communicate with the InfusionSoft API.
+            </summary>
+        </member>
+        <member name="M:Infusion.Interface.Access.#ctor(Infusion.Interface.Support.InfSoftConnection,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Infusion.Interface.Access"/> class.
+            </summary>
+            <param name="connections">The connections object that define all require settings.</param>
+            <param name="logWinEventLog">if set to <c>true</c> will log events in the windows application event viewer.</param>
+        </member>
+        <member name="M:Infusion.Interface.Access.AuthorizeAndGetToken(System.String,System.String)">
+            <summary>
+            Authorizes and get token.
+            It will process all the action require to get the token needed when calling the methods.
+            </summary>
+            <param name="userName">Name of the user.</param>
+            <param name="userPassword">The user password.</param>
+            <returns>Return an object with the acquired token data and status/message of the call.  Status = true (Success), otherwise failure and message contain details.</returns>
+        </member>
+        <member name="M:Infusion.Interface.Access.RefreshToken(System.String)">
+            <summary>
+            Refreshes the token.
+            </summary>
+            <param name="refreshToken">The refresh token previously actuired.</param>
+            <returns>Return an object with the acquired token data and status/message of the call.  Status = true (Success), otherwise failure and message contain details.</returns>
+        </member>
+        <member name="M:Infusion.Interface.Access.RetriveAContact(Infusion.Interface.BusinessObjects.AccessToken,Infusion.Interface.BusinessObjects.Contact.RetriveAContact.RetriveAContactRequest.MethodCall)">
+            <summary>
+            Retrives a contact information requested fields by a contact id.
+            </summary>
+            <param name="accessToken">The return access token obtain by "AuthorizeAndGetToken".</param>
+            <param name="methodRetriveAContact">The method class intialized with the query parameters and request values to retrive from a contact.</param>
+            <returns>Return the requested data and the status for the call.</returns>
+        </member>
+        <member name="M:Infusion.Interface.Access.FindByField(Infusion.Interface.BusinessObjects.AccessToken,Infusion.Interface.BusinessObjects.Data.FindByField.FindByFieldRequest.MethodCall)">
+            <summary>
+            Finds the by field specified in the MethodCall class.
+            </summary>
+            <param name="accessToken">The return access token obtain by "AuthorizeAndGetToken".</param>
+            <param name="methodFindByField">The method class intialized with the query parameters and request values to retrive from the reusted table.</param>
+            <returns>Return the requested data and the status for the call.</returns>
+        </member>
+        <member name="T:Infusion.Interface.BusinessObjects.Contact.RetriveAContact.RetriveAContactRequest">
+            <summary>
+            The Retrive A Contact request class container.  It contain all the classes that represent the InfusionSoft XML scheme.
+            </summary>
+        </member>
+        <member name="T:Infusion.Interface.BusinessObjects.Contact.RetriveAContact.RetriveAContactRequest.Value">
+            <summary>
+            Value class
+            </summary>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.Contact.RetriveAContact.RetriveAContactRequest.Value.String">
+            <summary>
+            Gets or sets the string.
+            </summary>
+            <value>
+            The string.
+            </value>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.Contact.RetriveAContact.RetriveAContactRequest.Value.Int">
+            <summary>
+            Gets or sets the int.
+            </summary>
+            <value>
+            The int.
+            </value>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.Contact.RetriveAContact.RetriveAContactRequest.Value.Array">
+            <summary>
+            Gets or sets the array.
+            </summary>
+            <value>
+            The array.
+            </value>
+        </member>
+        <member name="T:Infusion.Interface.BusinessObjects.Contact.RetriveAContact.RetriveAContactRequest.Param">
+            <summary>
+            Param class
+            </summary>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.Contact.RetriveAContact.RetriveAContactRequest.Param.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>
+            The value.
+            </value>
+        </member>
+        <member name="T:Infusion.Interface.BusinessObjects.Contact.RetriveAContact.RetriveAContactRequest.Data">
+            <summary>
+            Data class
+            </summary>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.Contact.RetriveAContact.RetriveAContactRequest.Data.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>
+            The value.
+            </value>
+        </member>
+        <member name="T:Infusion.Interface.BusinessObjects.Contact.RetriveAContact.RetriveAContactRequest.Array">
+            <summary>
+            Array class
+            </summary>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.Contact.RetriveAContact.RetriveAContactRequest.Array.Data">
+            <summary>
+            Gets or sets the data.
+            </summary>
+            <value>
+            The data.
+            </value>
+        </member>
+        <member name="T:Infusion.Interface.BusinessObjects.Contact.RetriveAContact.RetriveAContactRequest.Params">
+            <summary>
+            Params class
+            </summary>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.Contact.RetriveAContact.RetriveAContactRequest.Params.Param">
+            <summary>
+            Gets or sets the parameter.
+            </summary>
+            <value>
+            The parameter.
+            </value>
+        </member>
+        <member name="T:Infusion.Interface.BusinessObjects.Contact.RetriveAContact.RetriveAContactRequest.MethodCall">
+            <summary>
+            MethodCall class. Ir is initialized with the InfusionSoft method name.
+            </summary>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.Contact.RetriveAContact.RetriveAContactRequest.MethodCall.MethodName">
+            <summary>
+            Gets or sets the name of the method.
+            </summary>
+            <value>
+            The name of the method.
+            </value>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.Contact.RetriveAContact.RetriveAContactRequest.MethodCall.Params">
+            <summary>
+            Gets or sets the parameters.
+            </summary>
+            <value>
+            The parameters.
+            </value>
+        </member>
+        <member name="T:Infusion.Interface.BusinessObjects.Contact.RetriveAContact.RetriveAContactResponse">
+            <summary>
+            The Retrive A Contact response class.  It contain all the classes that represent the InfusionSoft XML scheme.
+            </summary>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.Contact.RetriveAContact.RetriveAContactResponse.ResponseValue">
+            <summary>
+            Gets or sets the response value.
+            </summary>
+            <value>
+            The response value.
+            </value>
+        </member>
+        <member name="T:Infusion.Interface.BusinessObjects.Contact.RetriveAContact.RetriveAContactResponse.Member">
+            <summary>
+            Member class
+            </summary>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.Contact.RetriveAContact.RetriveAContactResponse.Member.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.Contact.RetriveAContact.RetriveAContactResponse.Member.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>
+            The value.
+            </value>
+        </member>
+        <member name="T:Infusion.Interface.BusinessObjects.Contact.RetriveAContact.RetriveAContactResponse.Struct">
+            <summary>
+            Struct class
+            </summary>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.Contact.RetriveAContact.RetriveAContactResponse.Struct.Member">
+            <summary>
+            Gets or sets the member.
+            </summary>
+            <value>
+            The member.
+            </value>
+        </member>
+        <member name="T:Infusion.Interface.BusinessObjects.Contact.RetriveAContact.RetriveAContactResponse.Value">
+            <summary>
+            Value class
+            </summary>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.Contact.RetriveAContact.RetriveAContactResponse.Value.Struct">
+            <summary>
+            Gets or sets the structure.
+            </summary>
+            <value>
+            The structure.
+            </value>
+        </member>
+        <member name="T:Infusion.Interface.BusinessObjects.Contact.RetriveAContact.RetriveAContactResponse.Param">
+            <summary>
+            Param class
+            </summary>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.Contact.RetriveAContact.RetriveAContactResponse.Param.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>
+            The value.
+            </value>
+        </member>
+        <member name="T:Infusion.Interface.BusinessObjects.Contact.RetriveAContact.RetriveAContactResponse.Params">
+            <summary>
+            Params class
+            </summary>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.Contact.RetriveAContact.RetriveAContactResponse.Params.Param">
+            <summary>
+            Gets or sets the parameter.
+            </summary>
+            <value>
+            The parameter.
+            </value>
+        </member>
+        <member name="T:Infusion.Interface.BusinessObjects.Contact.RetriveAContact.RetriveAContactResponse.MethodResponse">
+            <summary>
+            MethodResponse class
+            </summary>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.Contact.RetriveAContact.RetriveAContactResponse.MethodResponse.Params">
+            <summary>
+            Gets or sets the parameters.
+            </summary>
+            <value>
+            The parameters.
+            </value>
+        </member>
+        <member name="T:Infusion.Interface.BusinessObjects.Data.FindByField.FindByFieldRequest">
+            <summary>
+            The Find By Field request class container.  It contain all the classes that represent the InfusionSoft XML scheme.
+            </summary>
+        </member>
+        <member name="T:Infusion.Interface.BusinessObjects.Data.FindByField.FindByFieldRequest.Value">
+            <summary>
+            Value class
+            </summary>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.Data.FindByField.FindByFieldRequest.Value.String">
+            <summary>
+            Gets or sets the string.
+            </summary>
+            <value>
+            The string.
+            </value>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.Data.FindByField.FindByFieldRequest.Value.Int">
+            <summary>
+            Gets or sets the int.
+            </summary>
+            <value>
+            The int.
+            </value>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.Data.FindByField.FindByFieldRequest.Value.Array">
+            <summary>
+            Gets or sets the array.
+            </summary>
+            <value>
+            The array.
+            </value>
+        </member>
+        <member name="T:Infusion.Interface.BusinessObjects.Data.FindByField.FindByFieldRequest.Param">
+            <summary>
+            Param class
+            </summary>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.Data.FindByField.FindByFieldRequest.Param.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>
+            The value.
+            </value>
+        </member>
+        <member name="T:Infusion.Interface.BusinessObjects.Data.FindByField.FindByFieldRequest.Data">
+            <summary>
+            Data class
+            </summary>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.Data.FindByField.FindByFieldRequest.Data.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>
+            The value.
+            </value>
+        </member>
+        <member name="T:Infusion.Interface.BusinessObjects.Data.FindByField.FindByFieldRequest.Array">
+            <summary>
+            Array class
+            </summary>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.Data.FindByField.FindByFieldRequest.Array.Data">
+            <summary>
+            Gets or sets the data.
+            </summary>
+            <value>
+            The data.
+            </value>
+        </member>
+        <member name="T:Infusion.Interface.BusinessObjects.Data.FindByField.FindByFieldRequest.Params">
+            <summary>
+            Params class
+            </summary>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.Data.FindByField.FindByFieldRequest.Params.Param">
+            <summary>
+            Gets or sets the parameter.
+            </summary>
+            <value>
+            The parameter.
+            </value>
+        </member>
+        <member name="T:Infusion.Interface.BusinessObjects.Data.FindByField.FindByFieldRequest.MethodCall">
+            <summary>
+            MethodCall class. Ir is initialized with the InfusionSoft method name.
+            </summary>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.Data.FindByField.FindByFieldRequest.MethodCall.MethodName">
+            <summary>
+            Gets or sets the name of the method.
+            </summary>
+            <value>
+            The name of the method.
+            </value>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.Data.FindByField.FindByFieldRequest.MethodCall.Params">
+            <summary>
+            Gets or sets the parameters.
+            </summary>
+            <value>
+            The parameters.
+            </value>
+        </member>
+        <member name="T:Infusion.Interface.BusinessObjects.Data.FindByField.FindByFieldResponse">
+            <summary>
+            The Find By Field response class.  It contain all the classes that represent the InfusionSoft XML scheme.
+            </summary>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.Data.FindByField.FindByFieldResponse.ResponseData">
+            <summary>
+            Gets or sets the response data.
+            </summary>
+            <value>
+            The response data.
+            </value>
+        </member>
+        <member name="T:Infusion.Interface.BusinessObjects.Data.FindByField.FindByFieldResponse.Member">
+            <summary>
+            Member class
+            </summary>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.Data.FindByField.FindByFieldResponse.Member.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.Data.FindByField.FindByFieldResponse.Member.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>
+            The value.
+            </value>
+        </member>
+        <member name="T:Infusion.Interface.BusinessObjects.Data.FindByField.FindByFieldResponse.Struct">
+            <summary>
+            Struct class
+            </summary>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.Data.FindByField.FindByFieldResponse.Struct.Member">
+            <summary>
+            Gets or sets the member.
+            </summary>
+            <value>
+            The member.
+            </value>
+        </member>
+        <member name="T:Infusion.Interface.BusinessObjects.Data.FindByField.FindByFieldResponse.Value">
+            <summary>
+            Value class
+            </summary>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.Data.FindByField.FindByFieldResponse.Value.Struct">
+            <summary>
+            Gets or sets the structure.
+            </summary>
+            <value>
+            The structure.
+            </value>
+        </member>
+        <member name="T:Infusion.Interface.BusinessObjects.Data.FindByField.FindByFieldResponse.Data">
+            <summary>
+            Data class
+            </summary>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.Data.FindByField.FindByFieldResponse.Data.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>
+            The value.
+            </value>
+        </member>
+        <member name="T:Infusion.Interface.BusinessObjects.Data.FindByField.FindByFieldResponse.Array">
+            <summary>
+            Array class
+            </summary>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.Data.FindByField.FindByFieldResponse.Array.Data">
+            <summary>
+            Gets or sets the data.
+            </summary>
+            <value>
+            The data.
+            </value>
+        </member>
+        <member name="T:Infusion.Interface.BusinessObjects.Data.FindByField.FindByFieldResponse.Param">
+            <summary>
+            Param class
+            </summary>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.Data.FindByField.FindByFieldResponse.Param.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>
+            The value.
+            </value>
+        </member>
+        <member name="T:Infusion.Interface.BusinessObjects.Data.FindByField.FindByFieldResponse.Params">
+            <summary>
+            Params class
+            </summary>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.Data.FindByField.FindByFieldResponse.Params.Param">
+            <summary>
+            Gets or sets the parameter.
+            </summary>
+            <value>
+            The parameter.
+            </value>
+        </member>
+        <member name="T:Infusion.Interface.BusinessObjects.Data.FindByField.FindByFieldResponse.MethodResponse">
+            <summary>
+            MethodResponse class
+            </summary>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.Data.FindByField.FindByFieldResponse.MethodResponse.Params">
+            <summary>
+            Gets or sets the parameters.
+            </summary>
+            <value>
+            The parameters.
+            </value>
+        </member>
+        <member name="T:Infusion.Interface.BusinessObjects.AccessToken">
+            <summary>
+            Access token object contain all the returned information.
+            </summary>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.AccessToken.Access_Token">
+            <summary>
+            Gets or sets the access token.
+            </summary>
+            <value>
+            The access token.
+            </value>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.AccessToken.Token_Type">
+            <summary>
+            Gets or sets the type of the token.
+            </summary>
+            <value>
+            The type of the token.
+            </value>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.AccessToken.Expires_In">
+            <summary>
+            Gets or sets the expires in (seconds).
+            </summary>
+            <value>
+            The expires in.
+            </value>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.AccessToken.Refresh_Token">
+            <summary>
+            Gets or sets the refresh token.
+            </summary>
+            <value>
+            The refresh token.
+            </value>
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.AccessToken.Scope">
+            <summary>
+            Gets or sets the scope.
+            </summary>
+            <value>
+            The scope.
+            </value>
+        </member>
+        <member name="T:Infusion.Interface.BusinessObjects.AccessTokenContainer">
+            <summary>
+            Access token container object.  Contain the AccessToken and StatusCall objects.
+            </summary>
+            <seealso cref="T:Infusion.Interface.Support.StatusCall" />
+        </member>
+        <member name="P:Infusion.Interface.BusinessObjects.AccessTokenContainer.AccessTokenInfo">
+            <summary>
+            Gets or sets the access token information.
+            </summary>
+            <value>
+            The access token information.
+            </value>
+        </member>
+        <member name="T:Infusion.Interface.Support.GlobalObjects">
+            <summary>
+            Class that provide global settings used across the interface.
+            </summary>
+        </member>
+        <member name="F:Infusion.Interface.Support.GlobalObjects.SUCCESS">
+            <summary>
+            The success
+            </summary>
+        </member>
+        <member name="F:Infusion.Interface.Support.GlobalObjects.FAILURE">
+            <summary>
+            The failure
+            </summary>
+        </member>
+        <member name="F:Infusion.Interface.Support.GlobalObjects.iSoftAuthURL">
+            <summary>
+            The authorization URL
+            </summary>
+        </member>
+        <member name="F:Infusion.Interface.Support.GlobalObjects.iSoftTokenURL">
+            <summary>
+            The token URL
+            </summary>
+        </member>
+        <member name="F:Infusion.Interface.Support.GlobalObjects.iSoftRESTURL">
+            <summary>
+            The API REST url
+            </summary>
+        </member>
+        <member name="F:Infusion.Interface.Support.GlobalObjects.iSoftKey">
+            <summary>
+            The key (clientId)
+            </summary>
+        </member>
+        <member name="F:Infusion.Interface.Support.GlobalObjects.iSoftSecret">
+            <summary>
+            The client secret
+            </summary>
+        </member>
+        <member name="F:Infusion.Interface.Support.GlobalObjects.iSoftRedirectURL">
+            <summary>
+            The redirect URL as setup for the clent Id
+            </summary>
+        </member>
+        <member name="F:Infusion.Interface.Support.GlobalObjects.iSoftXmlRpcURL">
+            <summary>
+            The XML-RPC URL
+            </summary>
+        </member>
+        <member name="F:Infusion.Interface.Support.GlobalObjects.iSoftTokenExpirationLimit">
+            <summary>
+            The token expiration limit (seconds) to subtract from the actuired expiration_in.
+            Default is zero.
+            </summary>
+        </member>
+        <member name="F:Infusion.Interface.Support.GlobalObjects.LogWinEventLog">
+            <summary>
+            The log win event log.  When "true" it will cause to log in the windows event viewer any exception (errors) to be log.  Default is "false"
+            </summary>
+        </member>
+        <member name="T:Infusion.Interface.Support.InfSoftConnection">
+            <summary>
+            Connection object to define needed values use throught the code.
+            </summary>
+        </member>
+        <member name="P:Infusion.Interface.Support.InfSoftConnection.ISoftAuthURL">
+            <summary>
+            Gets or sets the authorization URL.
+            </summary>
+            <value>
+            The authorization URL.
+            </value>
+        </member>
+        <member name="P:Infusion.Interface.Support.InfSoftConnection.ISoftTokenURL">
+            <summary>
+            Gets or sets the token URL.
+            </summary>
+            <value>
+            The token URL.
+            </value>
+        </member>
+        <member name="P:Infusion.Interface.Support.InfSoftConnection.ISoftRESTURL">
+            <summary>
+            Gets or sets the RESTFull url.
+            </summary>
+            <value>
+            The RESTFull.
+            </value>
+        </member>
+        <member name="P:Infusion.Interface.Support.InfSoftConnection.ISoftKey">
+            <summary>
+            Gets or sets the key (client_ID).
+            </summary>
+            <value>
+            The key (client_ID).
+            </value>
+        </member>
+        <member name="P:Infusion.Interface.Support.InfSoftConnection.ISoftSecret">
+            <summary>
+            Gets or sets the secret (client_secret).
+            </summary>
+            <value>
+            The secret (client_secret).
+            </value>
+        </member>
+        <member name="P:Infusion.Interface.Support.InfSoftConnection.ISoftRedirectUrl">
+            <summary>
+            Gets or sets the redirect URL setup for the application.
+            </summary>
+            <value>
+            The redirect URL.
+            </value>
+        </member>
+        <member name="P:Infusion.Interface.Support.InfSoftConnection.ISoftTokenExpirationLimit">
+            <summary>
+            Gets or sets the token expiration limit (seconds).   
+            This number will be subtract from the acquired token expiration limit to force a refresh of the token.
+            Default is zero (0).  This cause to use the acquired value.
+            </summary>
+            <value>
+            The token expiration limit.
+            </value>
+        </member>
+        <member name="P:Infusion.Interface.Support.InfSoftConnection.ISoftXmlRpcURL">
+            <summary>
+            Gets or sets the XML RPC URL.
+            </summary>
+            <value>
+            The XML RPC URL.
+            </value>
+        </member>
+        <member name="T:Infusion.Interface.Support.Utility">
+            <summary>
+            Itility class containing some methods to support others classes.
+            </summary>
+        </member>
+        <member name="M:Infusion.Interface.Support.Utility.XlmToObject(System.Type,System.String)">
+            <summary>
+            XLMs to object.
+            </summary>
+            <param name="myObject">Xml object.</param>
+            <param name="xmlData">The XML data.</param>
+            <returns>Return an object represented by the Xml passed data.</returns>
+        </member>
+        <member name="M:Infusion.Interface.Support.Utility.ObjectToXml(System.Object)">
+            <summary>
+            Xml Object to XmlDocument.
+            </summary>
+            <param name="myObject">Xml object.</param>
+            <returns>Return an XmlDocument object represented by the passed Xml object scheme.</returns>
+        </member>
+        <member name="T:Infusion.Interface.Support.XmlResponseData">
+            <summary>
+            Xml response data object.
+            </summary>
+            <seealso cref="T:Infusion.Interface.Support.StatusCall" />
+        </member>
+        <member name="P:Infusion.Interface.Support.XmlResponseData.ResponseData">
+            <summary>
+            Gets or sets the response data.
+            </summary>
+            <value>
+            The response data.
+            </value>
+        </member>
+        <member name="T:Infusion.Interface.Support.StatusCall">
+            <summary>
+            Status call object provide information about the method call.  "Status" = true, the call was success.  "Message" provide description for the call.
+            </summary>
+        </member>
+        <member name="P:Infusion.Interface.Support.StatusCall.Status">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Infusion.Interface.Support.StatusCall"/> was success or not.
+            </summary>
+            <value>
+              <c>true</c> if success; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Infusion.Interface.Support.StatusCall.Message">
+            <summary>
+            Gets or sets the message.
+            </summary>
+            <value>
+            The message.
+            </value>
+        </member>
+    </members>
+</doc>

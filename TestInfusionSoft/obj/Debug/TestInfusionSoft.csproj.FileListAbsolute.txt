@@ -1,0 +1,25 @@
+D:\Develop\VS2015\Projects\InfusionSoft\TestInfusionSoft\bin\Debug\TestInfusionSoft.exe.config
+D:\Develop\VS2015\Projects\InfusionSoft\TestInfusionSoft\bin\Debug\TestInfusionSoft.exe
+D:\Develop\VS2015\Projects\InfusionSoft\TestInfusionSoft\bin\Debug\TestInfusionSoft.pdb
+D:\Develop\VS2015\Projects\InfusionSoft\TestInfusionSoft\bin\Debug\Infusion.Interface.dll
+D:\Develop\VS2015\Projects\InfusionSoft\TestInfusionSoft\bin\Debug\Infusion.Interface.pdb
+D:\Develop\VS2015\Projects\InfusionSoft\TestInfusionSoft\obj\Debug\TestInfusionSoft.csprojResolveAssemblyReference.cache
+D:\Develop\VS2015\Projects\InfusionSoft\TestInfusionSoft\obj\Debug\TestInfusionSoft.exe
+D:\Develop\VS2015\Projects\InfusionSoft\TestInfusionSoft\obj\Debug\TestInfusionSoft.pdb
+D:\Develop\VS2015\Projects\InfusionSoft\TestInfusionSoft\bin\Debug\HtmlAgilityPack.dll
+D:\Develop\VS2015\Projects\InfusionSoft\TestInfusionSoft\bin\Debug\HtmlAgilityPack.pdb
+D:\Develop\VS2015\Projects\InfusionSoft\TestInfusionSoft\bin\Debug\HtmlAgilityPack.xml
+D:\Develop\VS2015\Projects\InfusionSoft\TestInfusionSoft\bin\Debug\Newtonsoft.Json.dll
+D:\Develop\VS2015\Projects\InfusionSoft\TestInfusionSoft\bin\Debug\Newtonsoft.Json.xml
+D:\Develop\VS2015\Projects\InfusionSoft\TestInfusionSoft\bin\Debug\Infusion.Interface.xml
+C:\temp\InfusionSoft Interface\TestInfusionSoft\bin\Debug\TestInfusionSoft.exe.config
+C:\temp\InfusionSoft Interface\TestInfusionSoft\obj\Debug\TestInfusionSoft.exe
+C:\temp\InfusionSoft Interface\TestInfusionSoft\obj\Debug\TestInfusionSoft.pdb
+C:\temp\InfusionSoft Interface\TestInfusionSoft\bin\Debug\TestInfusionSoft.exe
+C:\temp\InfusionSoft Interface\TestInfusionSoft\bin\Debug\TestInfusionSoft.pdb
+C:\temp\InfusionSoft Interface\TestInfusionSoft\bin\Debug\HtmlAgilityPack.pdb
+C:\temp\InfusionSoft Interface\TestInfusionSoft\bin\Debug\HtmlAgilityPack.xml
+C:\temp\InfusionSoft Interface\TestInfusionSoft\bin\Debug\Infusion.Interface.pdb
+C:\temp\InfusionSoft Interface\TestInfusionSoft\bin\Debug\Infusion.Interface.xml
+C:\temp\InfusionSoft Interface\TestInfusionSoft\bin\Debug\Newtonsoft.Json.xml
+C:\temp\InfusionSoft Interface\TestInfusionSoft\obj\Debug\TestInfusionSoft.csprojResolveAssemblyReference.cache
